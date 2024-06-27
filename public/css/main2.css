@@ -1,0 +1,601 @@
+::-webkit-scrollbar {
+    width: 10px;
+    
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px 10px transparent;
+    border: solid 3px transparent;
+    
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 10px 10px white;
+    border: solid 3px transparent;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+    
+    
+  }
+  @font-face {
+    font-family: 'fontello';
+    src: url('fontello.woff2') format('woff2'),
+         url('fontello.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @media (max-device-width: 1200px) and (orientation: landscape) {
+      .main #displayed-image {
+          height: 250px; /* Set a maximum height of 100 viewport height units */
+          width: auto;
+      }
+    .main .description {
+      overflow: auto;
+      height: auto;
+    }
+    .main .projectImg {
+      width: auto;
+      height: 100px;
+    }
+    .main .tables {
+      width: 60%;
+    }
+  }
+  @media (max-device-width: 1200px) and (orientation: portrait) {
+    .main .projectImg{
+          height: 160px; /* Set a maximum height of 100 viewport height units */
+          width: auto;
+      }
+    .main .description {
+      overflow: auto;
+      height: auto;
+    }
+    .main .projectImg {
+      height: 60px;
+      width: auto;
+    }
+    .main .tables {
+      font-size: 13px;
+      min-width: 100%;
+      overflow: auto;
+    }
+    .main #displayed-image {
+      height: 200px;
+      width: auto;
+    }
+    .main .projectTitle {
+      font-size: 12px;
+    }
+    .main .engTitle, .polTitle {
+      margin-right: 10px;
+      text-align: left;
+    }
+    .main .border {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .main .Eng {
+    position: relative;
+    
+    min-width: 65px;
+    white-space: nowrap;
+    min-height: 20px;
+  
+  }
+  .main .Pol {
+    position: relative;
+    
+    min-width: 46px;
+    white-space: nowrap;
+    min-height: 20px;
+  
+  }
+    
+  }
+  @media (max-device-width: 1200px) {
+    .menu .homeLink .services,
+    .about #pageviews-count {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      text-decoration: none;
+      color: black;
+      height: 60px;
+      
+    }
+  .hidden {
+    display: none;
+    user-select: text;
+  
+  }
+    .menu .dropdown .dropdown-content {
+      max-height: 1000px;
+      overflow: hidden;
+      transition: max-height 0.7s;
+    }
+  
+    .menu .dropdown .hidden {
+      max-height: 0;
+      overflow: hidden;
+    }
+    .menu .homeLink .services,
+    .visits #pageviews-count {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      text-decoration: none;
+      color: black;
+      height: 60px;
+      
+    }
+    
+  .hidden {
+    display: none;
+  }
+    .menu .dropdown .dropdown-content.services {
+      max-height: 1000px;
+      overflow: hidden;
+      transition: max-height 0.7s;
+    }
+  
+    .menu .dropdown .hidden {
+      max-height: 0;
+      overflow: hidden;
+    }
+    .main .mainContent #homeContent {
+    overflow: auto; /* Enable both vertical and horizontal scrolling if needed */
+    height: 97%; /* Take up 100% of the parent's height */
+    width: 100%;
+    background-color: rgb(176,196,222);
+    position: relative;
+    }
+    .content .menu #aboutMe {
+      margin-left: 0;
+    }
+    .content .menu #lang #pol,#eng {
+      width: 20px;
+      height: 15px;
+    }
+    .content .menu #lang {
+      margin-right: 3px;
+      padding: 0;
+    }
+    
+    
+    
+    .main .border {
+    background: transparent;
+    height: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 2px;
+    border: solid 3px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    .main .tech, .linkEng, .gitEng {
+      margin-right: 5px;
+    }
+    
+    .main .description {
+      width: 100%;
+    }
+  }
+  .bg {
+    background-color: white;
+  }
+  @media only screen and (min-device-width: 900px) {
+    .menu ul li a:hover {
+      background-color: #555;
+    }
+    .border:not(.not):hover {
+    background-color: rgb(65,105,225);
+  }
+    .menu .dropdown:hover .dropdown-content,
+    .dropdown-content:hover {
+      max-height: 1000px; /* Adjust this value based on your dropdown's height */
+    }
+    .menu .dropdown-content a:hover {
+      background-color: #555;
+    }
+  }
+  #viewer {
+    display: none;
+    justify-content: center;
+    align-items: center;  
+    height: 100%; /* Take up 100% of the parent's height */
+    width: 100%;/* Adjust this value based on your needs */
+    padding: 20px;
+    z-index: 1;
+    background: transparent;  
+    
+  }
+  .view {
+    height: auto; /* Take up 100% of the parent's height */
+    width: auto;
+  }
+  .icon-user {
+    font-style: normal;
+  }
+  #lang {
+    position: relative;
+    width: 60px;
+    height: 54px;
+    
+    margin-right: 10px;
+  }
+  #aboutMe {
+    position: relative;
+    height: 54px;
+    min-width: 100px;
+    text-align: center;
+    margin-left: 50px;
+    margin: 0
+  }
+  #aboutMe:hover {
+    background-color: #555;
+  }
+  #engAbout, #polAbout {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    color: black;
+  }
+  #projects {
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    color: black;
+    width: 100px;
+    height: 56px;
+    float: left;
+
+		
+
+		
+
+		
+  }
+#projects:before,
+	#projects:after {
+		content: "";
+		position: absolute;
+
+		height: 10px;
+		width: 20px;
+
+		bottom: 0;
+	}
+
+	#projects:after {
+		right: -20px;
+
+		border-radius: 0 0 0 10px;
+		-moz-border-radius: 0 0 0 10px;
+		-webkit-border-radius: 0 0 0 10px;
+
+		-webkit-box-shadow: -10px 0 0 0 #fff;
+		box-shadow: -10px 0 0 0 #fff;
+	}
+
+	#projects:before {
+		left: -20px;
+
+		border-radius: 0 0 10px 0;
+		-moz-border-radius: 0 0 10px 0;
+		-webkit-border-radius: 0 0 10px 0;
+
+		-webkit-box-shadow: 10px 0 0 0 #fff;
+		box-shadow: 10px 0 0 0 #fff;
+	}
+
+  #projectsEng, #projectsPol {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .toggle-element {
+    opacity: 0;
+    display: hidden;
+    
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Adjust the duration and easing function as needed */
+  }
+  .visible {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+  
+  }
+  #home:hover, #service1:hover, #service2:hover, #service3:hover, #engAbout:hover, #polAbout:hover, #lang:hover {
+    background-color: #555;
+  }
+  #aboutMe {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  .homeLink,
+  #lang {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-decoration: none;
+    color: black;
+    height: 54px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+  .services {
+    position: absolute;
+  }
+  .visits {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-decoration: none;
+    color: black;
+    height: 54px;
+    padding-left: 10px;
+    padding-right: 3px;
+  }
+  #visits {
+    position: relative;
+    height: 60px;
+    width: 120px;
+    margin-left: auto;
+  }
+  #visitEng, #visitPol {
+    position: absolute;
+  }
+  #pageviews-count {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-decoration: none;
+    color: black;
+    height: 60px;
+  }
+  
+  .bg {
+    background-color: white;
+  }
+  .homeLink:hover {
+    background-color: #555;
+  }
+  .services {
+    user-select: none;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    background-color: rgb(128,128,128);
+    text-decoration: none;
+    color: black; /* Set the font color to black */
+    height: 54px;
+    width: calc(100vw - 6px);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    border-left: 3px solid white;
+    
+  }
+  .dropdown {
+    position: relative;
+    background-color: rgb(128,128,128);
+  }
+  
+  .dropdown .dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    background-color: #333;
+    min-width: auto;
+    white-space: nowrap;
+    z-index: 2;
+    top: 100%; /* Position the dropdown-content below the menu item */
+    left: 0; /* Align the left edges */
+    transition: max-height 0.7s;
+    
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    width: auto;
+  }
+  
+  
+  
+  .code {
+    position: absolute;
+    left: 0; /* Set the left position (horizontal) */
+    top: 60px;
+    z-index: -1;
+    width: calc(100% - 6px);
+    height: calc(100vh - 63px);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left: solid 3px white;
+    border-right: solid 3px white;
+    
+  }
+  
+  .main {
+    height: calc(100vh - 60px);
+  }
+  .mainContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Adjust this value based on your needs */
+    overflow: hidden;  
+    box-sizing: border-box;
+    padding: 20px;  
+  }
+  
+  #homeContent {
+    overflow: auto; /* Enable both vertical and horizontal scrolling if needed */
+    height: 100%; /* Take up 100% of the parent's height */
+    width: 100%;
+    background-color: rgb(176,196,222);
+    position: relative;
+    z-index: 0;
+    
+  }
+  
+  #eng, #pol, #textEng, #textPol {
+    position: absolute;
+  }
+  #textEng {
+    text-align: justify;
+    overflow-x: hidden;
+    
+  }
+  
+  .icon-user {
+    margin-left: 15px;
+  }
+  .tables:not(#Ctables) {
+    display: flex;
+    flex-direction: row;
+    
+    margin-top: 10px;
+    max-width: 45%;
+  }
+  #Ctables {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    
+  }
+   
+  
+  .border {
+    background: transparent;
+    height: 36px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    padding: 2px;
+    border: solid 3px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    width: auto;
+  }
+  .project {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .imageDescription {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .imageTables {
+    display: flex;
+    flex-direction: column;
+  }
+  .image {
+    
+    
+    height: 100%;
+  }
+  .projectImg {
+  
+    width: auto;
+    height: 400px;
+    width: 672px; /* Ensure the image doesn't exceed its original size */
+    display: block; /* Prevents extra space below inline-block images */
+    border-radius: 10px;
+    border: 3px solid white;
+  }
+  .projectImg:hover {
+    opacity: 0.8;
+  }
+  
+  .git, .link, .tech {
+    position: relative;
+   
+  }
+  .descriptionEng, .descriptionPol {
+    position: absolute;
+    user-select: text;
+  }
+  .description {
+    position: relative;
+    width: 100%;
+    margin-left: 10px;
+  } 
+  .borderContent {
+    margin-right: 4px;
+  }
+  
+  #displayed-image {
+    width: 950px;
+    height: auto;
+  }
+  .projectTitle {
+    height: 20px;
+    padding: 10px;
+    font-weight: bold;
+  }
+  .engTitle, .polTitle {
+    position: absolute;
+  }
+  .Eng {
+    position: relative;
+    
+    min-width: 80px;
+    white-space: nowrap;
+    min-height: 20px;
+  
+  }
+  .Pol {
+    position: relative;
+    
+    min-width: 60px;
+    white-space: nowrap;
+    min-height: 20px;
+  
+  }
+  .downloadEng, .downloadPol {
+    position: absolute;
+  }
+  .icon-group {
+  margin-left: auto;
+}
+#eng, #pol {
+  width: 50px;
+  height: 30px;
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "index": 0,
+    "players": 1,
+    "user1": "kk",
+    "user2": "",
+    "block": 0
+  },
+  {
+    "index": 1,
+    "players": 0,
+    "user1": "",
+    "user2": "",
+    "block": 0
+  },
+  {
+    "index": 2,
+    "players": 1,
+    "user1": "jj",
+    "user2": "",
+    "block": 0
+  },
+  {
+    "index": 3,
+    "players": 0,
+    "user1": "",
+    "user2": "",
+    "block": 0
+  },
+  {
+    "index": 4,
+    "players": 0,
+    "user1": "",
+    "user2": "",
+    "block": 0
+  },
+  {
+    "index": 5,
+    "players": 0,
+    "user1": "",
+    "user2": "",
+    "block": 0
+  },
+  {
+    "index": 6,
+    "players": 0,
+    "user1": "",
+    "user2": "",
+    "block": 0
+  },
+  {
+    "index": 7,
+    "players": 0,
+    "user1": "",
+    "user2": "",
+    "block": 0
+  },
+  {
+    "index": 8,
+    "players": 2,
+    "user1": "jjj",
+    "user2": "j",
+    "block": 0
+  }
+]
